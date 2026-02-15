@@ -5,81 +5,207 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy - Avinova Expense Tracker</title>
 <style>
+    :root {
+        --primary-color: #1e40af; /* Deep Royal Blue */
+        --accent-color: #3b82f6;  /* Brighter Blue for highlights */
+        --text-dark: #1f2937;     /* Soft Black */
+        --text-light: #6b7280;    /* Muted Grey */
+        --bg-color: #f3f4f6;      /* Light Cool Grey */
+        --card-bg: #ffffff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-        font-family: Arial, sans-serif;
-        margin: 40px;
-        line-height: 1.6;
-        background-color: #f9fafb;
-        color: #333;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+        background-color: var(--bg-color);
+        color: var(--text-dark);
+        -webkit-font-smoothing: antialiased;
     }
-    h1 {
-        color: #1f3c88;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+        min-height: 100vh;
     }
-    h2 {
-        color: #2a5298;
-        margin-top: 25px;
-    }
+
     .container {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        max-width: 750px;
+        width: 100%;
+        background: var(--card-bg);
+        padding: 40px 50px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 
+                    0 8px 10px -6px rgba(0, 0, 0, 0.01);
     }
+
+    /* Header Styles */
+    header {
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    h1 {
+        color: var(--primary-color);
+        margin: 0 0 10px 0;
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+    }
+
+    .badge {
+        display: inline-block;
+        background-color: #e0e7ff;
+        color: var(--primary-color);
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+    /* Content Styles */
+    h2 {
+        color: var(--text-dark);
+        font-size: 1.25rem;
+        margin-top: 35px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Adds a small blue accent line next to headings */
+    h2::before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 24px;
+        background-color: var(--accent-color);
+        margin-right: 12px;
+        border-radius: 4px;
+    }
+
+    p {
+        color: #374151;
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+    }
+
+    strong {
+        color: var(--text-dark);
+        font-weight: 600;
+    }
+
+    /* Contact Section Styling */
+    .contact-box {
+        background-color: #f9fafb;
+        border: 1px solid #e5e7eb;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .email-link {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+    }
+
+    .email-link:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
+
+    /* Footer Styles */
     .footer {
-        margin-top: 30px;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #f0f0f0;
         font-size: 0.9em;
-        color: #777;
+        color: var(--text-light);
+        text-align: center;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 600px) {
+        .container {
+            padding: 30px 20px;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
+        .wrapper {
+            padding: 20px 10px;
+        }
     }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Privacy Policy</h1>
-    <p><strong>Effective Date:</strong> 15 February 2026</p>
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="badge">Effective Date: 15 February 2026</div>
+        </header>
 
-    <p>
-        This Privacy Policy describes how <strong>Avinova – Expense Tracker</strong> ("the App") handles user information.
-    </p>
+        <section>
+            <p>
+                This Privacy Policy describes how <strong>Avinova – Expense Tracker</strong> ("the App") handles user information. We are committed to transparency and ensuring that your financial data remains private and secure.
+            </p>
 
-    <h2>1. Data Collection</h2>
-    <p>
-        The App does <strong>not collect, store, or share</strong> any personal information from users.
-    </p>
+            <h2>1. Data Collection</h2>
+            <p>
+                We believe in privacy by design. The App <strong>does not collect, store, or share</strong> any personal identifiable information (PII) or usage data from users. We do not require account registration to use the App.
+            </p>
 
-    <h2>2. Local Data Storage</h2>
-    <p>
-        All expense data entered into the App is stored locally on the user’s device using secure SQLite database storage.
-        The App does not transmit data to any external servers.
-    </p>
+            <h2>2. Local Data Storage</h2>
+            <p>
+                Your financial privacy is paramount. All expense data, categories, and logs entered into the App are stored strictly <strong>locally on your device</strong> using secure SQLite database storage. 
+            </p>
+            <p>
+                The App does not have access to the internet for the purpose of syncing data, and no data is transmitted to external servers or cloud storage provided by Avinova.
+            </p>
 
-    <h2>3. Third-Party Services</h2>
-    <p>
-        The App does not use third-party analytics, advertising networks, tracking tools, or external SDKs.
-    </p>
+            <h2>3. Third-Party Services</h2>
+            <p>
+                The App operates independently. We do not utilize third-party analytics (like Google Analytics), advertising networks, tracking tools, or external SDKs that gather user behavior.
+            </p>
 
-    <h2>4. Data Responsibility</h2>
-    <p>
-        Users are solely responsible for managing and backing up their data. 
-        Uninstalling the App may result in permanent loss of locally stored data.
-    </p>
+            <h2>4. Data Responsibility</h2>
+            <p>
+                Because your data is stored locally, <strong>you are solely responsible</strong> for managing and backing up your information. 
+            </p>
+            <p>
+                Please note that uninstalling the App or clearing the App's storage via your device settings may result in the <strong>permanent loss</strong> of all locally stored data. We recommend regular backups if your device allows.
+            </p>
 
-    <h2>5. Changes to This Policy</h2>
-    <p>
-        This Privacy Policy may be updated in future versions of the App. 
-        Any changes will be reflected on this page with an updated effective date.
-    </p>
+            <h2>5. Changes to This Policy</h2>
+            <p>
+                We may update our Privacy Policy from time to time to reflect changes in legal requirements or app functionality. Any changes will be posted on this page with an updated effective date.
+            </p>
 
-    <h2>6. Contact</h2>
-    <p>
-        If you have any questions regarding this Privacy Policy, please contact:
-        <br><strong>Email:</strong> Avinash2003kum@gmail.com
-    </p>
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+            
+            <div class="contact-box">
+                <strong>Support Email:</strong><br>
+                <a href="mailto:Avinash2003kum@gmail.com" class="email-link">Avinash2003kum@gmail.com</a>
+            </div>
 
-    <div class="footer">
-        © 2026 Avinova. All rights reserved.
+        </section>
+
+        <div class="footer">
+            &copy; 2026 Avinova. All rights reserved.
+        </div>
     </div>
 </div>
 
